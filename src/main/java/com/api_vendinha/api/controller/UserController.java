@@ -4,10 +4,7 @@ import com.api_vendinha.api.domain.dtos.request.UserRequestDto;
 import com.api_vendinha.api.domain.dtos.response.UserResponseDto;
 import com.api_vendinha.api.domain.service.UserServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Controlador REST para gerenciar operações relacionadas aos usuários.
@@ -35,9 +32,24 @@ public class UserController {
      * @param userRequestDto DTO que contém os dados do usuário a ser salvo.
      * @return DTO com as informações do usuário salvo, incluindo o ID gerado.
      */
-    @PostMapping // Define que este método lida com requisições HTTP POST.
+    @PostMapping// Define que este método lida com requisições HTTP POST.
     public UserResponseDto salvar(@RequestBody UserRequestDto userRequestDto) {
         // Chama o serviço para salvar o usuário e retorna a resposta.
         return userService.save(userRequestDto);
+    }
+    @PutMapping("/user/{id}") // Define que este método lida com requisições HTTP POST.
+    public UserResponseDto atualizar(@RequestBody UserRequestDto userRequestDto, @PathVariable Long id) {
+        // Chama o serviço para salvar o usuário e retorna a resposta.
+        return userService.atualizar(userRequestDto, id);
+    }
+    @GetMapping("/user/{id}")
+    public UserResponseDto buscar( @PathVariable Long id) {
+        // Chama o serviço para salvar o usuário e retorna a resposta.
+        return userService.buscar(id);
+    }
+    @PutMapping("/user/{id}/{status}")
+    public UserResponseDto atualizarStatus( @PathVariable Long id, @PathVariable boolean status) {
+        // Chama o serviço para salvar o usuário e retorna a resposta.
+        return userService.atualizarStatus(status,id);
     }
 }
