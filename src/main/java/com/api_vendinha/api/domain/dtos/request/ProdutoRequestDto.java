@@ -10,7 +10,7 @@ public class ProdutoRequestDto {
     private String name;
     private int quantity;
     private float price;
-    private String userId;
+    private Long userId;
 
 }
 

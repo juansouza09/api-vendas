@@ -30,6 +30,6 @@ public class Produto {
     private Float price;
 
     @Column(nullable = false)
-    private String userId;
+    private Long userId;
 
 }

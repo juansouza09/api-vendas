@@ -10,5 +10,5 @@ public class ProdutoResponseDto {
     private String name;
     private int quantity;
     private float price;
-    private String userId;
+    private Long userId;
 }
