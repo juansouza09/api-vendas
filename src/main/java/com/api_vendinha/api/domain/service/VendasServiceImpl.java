@@ -44,7 +44,7 @@ public class VendasServiceImpl implements VendasServiceInterface {
 
         // Criar e salvar a venda
         Vendas novaVenda = new Vendas();
-        novaVenda.setUserId(1L);
+        novaVenda.setUserId(vendaRequestDto.getUserId());
         novaVenda.setProductId(produto.getId());
         novaVenda.setQuantity(vendaRequestDto.getQuantity());
         novaVenda.setPrice(vendaRequestDto.getPrice());

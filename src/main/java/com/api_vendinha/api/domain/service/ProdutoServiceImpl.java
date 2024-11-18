@@ -27,7 +27,7 @@ public class ProdutoServiceImpl implements ProdutoServiceInterface {
         produto.setName(produtoRequestDto.getName());
         produto.setQuantity(produtoRequestDto.getQuantity());
         produto.setPrice(produtoRequestDto.getPrice());
-
+        produto.setUserId(produtoRequestDto.getUserId());
 
         Produto produtoSaved = produtoRepository.save(produto);
 
