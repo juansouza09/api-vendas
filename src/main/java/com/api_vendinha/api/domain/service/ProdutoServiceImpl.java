@@ -71,7 +71,7 @@ public class ProdutoServiceImpl implements ProdutoServiceInterface {
             produtoResponseDto.setQuantity(produto.getQuantity());
             produtoResponseDto.setName(produto.getName());
             produtoResponseDto.setPrice(produto.getPrice());
-
+            produtoResponseDto.setUserId(produto.getUserId());
 
             return produtoResponseDto;
     }
