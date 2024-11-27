@@ -13,4 +13,5 @@ public class VendasResponseDto {
     private Long productId;
     private int quantity;
     private float price;
+    private Boolean is_active;
 }

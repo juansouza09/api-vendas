@@ -19,6 +19,7 @@ public class Vendas {
         private Long id;
         private int quantity;
         private float price;
+        private Boolean is_active;
         @Column(name = "product_id", nullable = false)
         private Long productId; // ID do produto vendido
 

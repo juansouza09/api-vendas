@@ -7,7 +7,9 @@ import java.util.List;
 
 public interface VendasServiceInterface {
     VendasResponseDto realizarVenda(VendasRequestDto vendaRequestDto);
-    List<VendasResponseDto> listarVendas(); // Se você quiser listar todas as vendas
-    VendasResponseDto buscarVenda(Long id); // Para buscar uma venda específica
+    List<VendasResponseDto> listarVendas();
+    VendasResponseDto buscarVenda(Long id);
+    VendasResponseDto inativarVenda(Long id);
+
 
 }

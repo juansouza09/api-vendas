@@ -42,6 +42,11 @@ public class VendasController {
     public VendasResponseDto buscarVenda(@PathVariable Long id) {
         return vendasService.buscarVenda(id);
     }
+    // Nova rota para inativar uma venda
+    @GetMapping("/inativar/{id}")
+    public VendasResponseDto inativarVenda(@PathVariable Long id) {
+        return vendasService.inativarVenda(id);
+    }
     }
 
 
